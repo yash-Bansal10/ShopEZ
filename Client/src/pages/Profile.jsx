@@ -37,7 +37,7 @@ const Profile = () => {
 
   const handleCancel = async (orderId) => {
     try {
-      await axios.delete(`http://localhost:8000/api/orders/${orderId}`);
+      await axios.delete(`http://localhost:8000/api/orders/cancel/${orderId}`);
       setOrders(orders.filter(o => o._id !== orderId));
     } catch (error) {
        console.error("Error canceling order:", error);
