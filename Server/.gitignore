@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment variables (IMPORTANT: keep MONGO_URI secret!)
+.env
+.env.local
+.env.production
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

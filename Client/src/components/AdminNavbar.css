@@ -1,0 +1,43 @@
+.admin-navbar {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-brand {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.admin-nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.admin-nav-link {
+  color: #ccc;
+  font-size: 1rem;
+  transition: color 0.2s;
+  font-family: inherit;
+}
+
+.admin-nav-link:hover {
+  color: #fff;
+}
+
+.admin-logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ccc;
+}

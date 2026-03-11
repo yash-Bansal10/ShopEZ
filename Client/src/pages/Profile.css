@@ -1,0 +1,151 @@
+.profile-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.profile-info p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.user-badge {
+  background-color: rgba(94, 0, 6, 0.1);
+  color: var(--color-primary-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid rgba(94, 0, 6, 0.2);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.order-id {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.order-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.order-status.order-placed {
+  background-color: #EED9B9;
+  color: #D53E0F;
+}
+
+.order-status.delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.order-body {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.order-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-details {
+  flex-grow: 1;
+}
+
+.order-details h4 {
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.3rem;
+}
+
+.order-details p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.order-total {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.order-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .order-body {
+     flex-direction: column;
+     text-align: center;
+  }
+  .order-footer {
+     flex-direction: column;
+     gap: 0.5rem;
+     text-align: center;
+  }
+}
