@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/users/login', formData);
+      const response = await axios.post('https://shopez-83qn.onrender.com/api/users/login', formData);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
       const usertype = response.data.user.usertype;

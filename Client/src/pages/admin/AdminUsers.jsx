@@ -11,7 +11,7 @@ const AdminUsers = () => {
 
   useEffect(() => {
     if (!user || user.usertype !== 'Admin') { navigate('/'); return; }
-    axios.get('http://localhost:8000/api/users')
+    axios.get('https://shopez-83qn.onrender.com/api/users')
       .then(res => { setUsers(res.data); setLoading(false); })
       .catch(err => { console.error(err); setLoading(false); });
   }, []);

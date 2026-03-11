@@ -18,9 +18,9 @@ const AdminDashboard = () => {
 
     // Fetch all data in parallel
     Promise.all([
-      axios.get('http://localhost:8000/api/users'),
-      axios.get('http://localhost:8000/api/products'),
-      axios.get('http://localhost:8000/api/orders')
+      axios.get('https://shopez-83qn.onrender.com/api/users'),
+      axios.get('https://shopez-83qn.onrender.com/api/products'),
+      axios.get('https://shopez-83qn.onrender.com/api/orders')
     ]).then(([usersRes, productsRes, ordersRes]) => {
       setStats({
         users: usersRes.data.length,

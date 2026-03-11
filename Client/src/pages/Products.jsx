@@ -19,7 +19,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/products');
+        const response = await axios.get('https://shopez-83qn.onrender.com/api/products');
         setProducts(response.data);
         setLoading(false);
       } catch (error) {

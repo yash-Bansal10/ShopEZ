@@ -18,7 +18,7 @@ const Cart = () => {
 
     const fetchCart = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/cart/${user._id}`);
+        const response = await axios.get(`https://shopez-83qn.onrender.com/api/cart/${user._id}`);
         setCartItems(response.data);
       } catch (error) {
         console.error("Error fetching cart:", error);
@@ -32,7 +32,7 @@ const Cart = () => {
 
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/cart/${id}`);
+      await axios.delete(`https://shopez-83qn.onrender.com/api/cart/${id}`);
       setCartItems(cartItems.filter(item => item._id !== id));
     } catch (error) {
       console.error("Failed to remove item", error);

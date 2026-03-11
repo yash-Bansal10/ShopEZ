@@ -15,7 +15,7 @@ const AdminProducts = () => {
 
   useEffect(() => {
     if (!user || user.usertype !== 'Admin') { navigate('/'); return; }
-    axios.get('http://localhost:8000/api/products')
+    axios.get('https://shopez-83qn.onrender.com/api/products')
       .then(res => { setProducts(res.data); setFilteredProducts(res.data); setLoading(false); })
       .catch(err => { console.error(err); setLoading(false); });
   }, []);
@@ -33,7 +33,7 @@ const AdminProducts = () => {
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this product?')) return;
     try {
-      await axios.delete(`http://localhost:8000/api/products/${id}`);
+      await axios.delete(`https://shopez-83qn.onrender.com/api/products/${id}`);
       setProducts(products.filter(p => p._id !== id));
     } catch (err) { console.error(err); }
   };

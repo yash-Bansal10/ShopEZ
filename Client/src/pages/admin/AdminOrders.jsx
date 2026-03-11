@@ -12,7 +12,7 @@ const AdminOrders = () => {
 
   useEffect(() => {
     if (!user || user.usertype !== 'Admin') { navigate('/'); return; }
-    axios.get('http://localhost:8000/api/orders')
+    axios.get('https://shopez-83qn.onrender.com/api/orders')
       .then(res => { setOrders(res.data); setLoading(false); })
       .catch(err => { console.error(err); setLoading(false); });
   }, []);
@@ -25,14 +25,14 @@ const AdminOrders = () => {
     const orderStatus = statusInputs[orderId];
     if (!orderStatus) return;
     try {
-      await axios.put(`http://localhost:8000/api/orders/${orderId}/status`, { orderStatus });
+      await axios.put(`https://shopez-83qn.onrender.com/api/orders/${orderId}/status`, { orderStatus });
       setOrders(orders.map(o => o._id === orderId ? { ...o, orderStatus } : o));
     } catch (err) { console.error(err); }
   };
 
   const handleCancel = async (orderId) => {
     try {
-      await axios.delete(`http://localhost:8000/api/orders/cancel/${orderId}`);
+      await axios.delete(`https://shopez-83qn.onrender.com/api/orders/cancel/${orderId}`);
       setOrders(orders.filter(o => o._id !== orderId));
     } catch (err) { console.error(err); }
   };

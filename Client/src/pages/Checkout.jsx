@@ -24,7 +24,7 @@ const Checkout = () => {
 
     const fetchCart = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/cart/${user._id}`);
+        const response = await axios.get(`https://shopez-83qn.onrender.com/api/cart/${user._id}`);
         setCartItems(response.data);
       } catch (error) {
         console.error("Error fetching cart:", error);
@@ -57,7 +57,7 @@ const Checkout = () => {
     try {
       // Loop through cart items and create an order for each (based on schema)
       for (let item of cartItems) {
-         await axios.post('http://localhost:8000/api/orders', {
+         await axios.post('https://shopez-83qn.onrender.com/api/orders', {
              userId: user._id,
              name: formData.name,
              email: user.email,
@@ -74,7 +74,7 @@ const Checkout = () => {
              paymentMethod: formData.paymentMethod
          });
          // Clean up cart as we go
-         await axios.delete(`http://localhost:8000/api/cart/${item._id}`);
+         await axios.delete(`https://shopez-83qn.onrender.com/api/cart/${item._id}`);
       }
 
       alert("Order Placed Successfully!");

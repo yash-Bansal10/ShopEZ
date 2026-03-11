@@ -11,7 +11,7 @@ const UpdateProduct = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/products/${id}`)
+    axios.get(`https://shopez-83qn.onrender.com/api/products/${id}`)
       .then(res => {
         const p = res.data;
         setFormData({ title: p.title, description: p.description, mainImg: p.mainImg, category: p.category, gender: p.gender, price: p.price, discount: p.discount || 0 });
@@ -23,7 +23,7 @@ const UpdateProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8000/api/products/${id}`, { ...formData, price: parseFloat(formData.price), discount: parseFloat(formData.discount) });
+      await axios.put(`https://shopez-83qn.onrender.com/api/products/${id}`, { ...formData, price: parseFloat(formData.price), discount: parseFloat(formData.discount) });
       alert('Product updated!');
       navigate('/admin/products');
     } catch (err) { alert('Update failed'); }

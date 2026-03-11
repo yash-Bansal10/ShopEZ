@@ -26,7 +26,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post('http://localhost:8000/api/users/register', {
+      await axios.post('https://shopez-83qn.onrender.com/api/users/register', {
         username: formData.username,
         email: formData.email,
         password: formData.password,

@@ -17,7 +17,7 @@ const Profile = () => {
 
     const fetchOrders = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/orders/${user._id}`);
+        const response = await axios.get(`https://shopez-83qn.onrender.com/api/orders/${user._id}`);
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);
@@ -37,7 +37,7 @@ const Profile = () => {
 
   const handleCancel = async (orderId) => {
     try {
-      await axios.delete(`http://localhost:8000/api/orders/cancel/${orderId}`);
+      await axios.delete(`https://shopez-83qn.onrender.com/api/orders/cancel/${orderId}`);
       setOrders(orders.filter(o => o._id !== orderId));
     } catch (error) {
        console.error("Error canceling order:", error);

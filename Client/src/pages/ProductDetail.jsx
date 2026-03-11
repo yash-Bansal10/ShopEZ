@@ -16,7 +16,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/products/${id}`);
+        const response = await axios.get(`https://shopez-83qn.onrender.com/api/products/${id}`);
         setProduct(response.data);
         if(response.data.sizes && response.data.sizes.length > 0) {
            setSelectedSize(response.data.sizes[0]);
@@ -41,7 +41,7 @@ const ProductDetail = () => {
 
     setAddingToCart(true);
     try {
-      await axios.post('http://localhost:8000/api/cart', {
+      await axios.post('https://shopez-83qn.onrender.com/api/cart', {
         userId: user._id,
         title: product.title,
         description: product.description,

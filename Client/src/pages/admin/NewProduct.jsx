@@ -47,7 +47,7 @@ const NewProduct = () => {
       discount: parseFloat(formData.discount) || 0
     };
     try {
-      await axios.post('http://localhost:8000/api/products', payload);
+      await axios.post('https://shopez-83qn.onrender.com/api/products', payload);
       alert('Product added successfully!');
       navigate('/admin/products');
     } catch (err) {
